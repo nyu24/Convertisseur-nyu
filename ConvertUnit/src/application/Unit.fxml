@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UnitController">
+   <children>
+      <TabPane fx:id="monTab" layoutY="1.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnL" layoutX="446.0" layoutY="14.0" mnemonicParsing="false" onAction="#change" text="Longueur" AnchorPane.rightAnchor="20.0" />
+                        <Button fx:id="btnM" layoutX="481.0" layoutY="75.0" mnemonicParsing="false" onAction="#change" text="Masse" AnchorPane.rightAnchor="20.0" />
+                        <Button fx:id="btnV" layoutX="466.0" layoutY="138.0" mnemonicParsing="false" onAction="#change" text="Volume" AnchorPane.rightAnchor="20.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="tbLong" text="Longueur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="294.0" layoutY="82.0" prefHeight="45.0" prefWidth="24.0" text="=" />
+                        <TextField fx:id="txtl2" layoutX="353.0" layoutY="60.0" onKeyReleased="#convertL2" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="217.0" />
+                        <TextField fx:id="txtl1" layoutX="34.0" layoutY="60.0" onKeyReleased="#convertL1" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="217.0" />
+                        <ComboBox fx:id="cbol1" layoutX="68.0" layoutY="146.0" onAction="#convertL1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbol2" layoutX="387.0" layoutY="146.0" onAction="#convertL1" prefWidth="150.0" />
+                        <Button fx:id="btnExit" layoutX="508.0" layoutY="277.0" mnemonicParsing="false" onAction="#quitter" text="Quit" />
+                        <Button fx:id="btnAc" layoutX="16.0" layoutY="277.0" mnemonicParsing="false" onAction="#change" text="Accueil" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Massse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtm1" layoutX="34.0" layoutY="60.0" onKeyReleased="#convertM1" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="217.0" />
+                        <TextField fx:id="txtm2" layoutX="349.0" layoutY="60.0" onKeyReleased="#convertM2" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="216.0" />
+                        <ComboBox fx:id="cbom1" layoutX="69.0" layoutY="146.0" onAction="#convertM1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbom2" layoutX="382.0" layoutY="146.0" onAction="#convertM1" prefWidth="150.0" />
+                        <Button fx:id="btnAc1" layoutX="14.0" layoutY="277.0" mnemonicParsing="false" onAction="#change" text="Accueil" />
+                        <Button fx:id="btnExit1" layoutX="508.0" layoutY="277.0" mnemonicParsing="false" onAction="#quitter" text="Quit" />
+                        <Label layoutX="300.0" layoutY="82.0" prefHeight="45.0" prefWidth="24.0" text="=" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Volume">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtv1" layoutX="35.0" layoutY="60.0" onKeyReleased="#convertV1" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="217.0" />
+                        <TextField fx:id="txtv2" layoutX="349.0" layoutY="60.0" onKeyReleased="#convertV2" onKeyTyped="#verifNum" prefHeight="67.0" prefWidth="217.0" />
+                        <ComboBox fx:id="cbov1" layoutX="69.0" layoutY="146.0" onAction="#convertV1" prefWidth="150.0" />
+                        <ComboBox fx:id="cbov2" layoutX="383.0" layoutY="146.0" onAction="#convertV1" prefWidth="150.0" />
+                        <Button fx:id="btnAc3" layoutX="15.0" layoutY="277.0" mnemonicParsing="false" onAction="#change" text="Accueil" />
+                        <Button fx:id="btnExit3" layoutX="508.0" layoutY="277.0" mnemonicParsing="false" onAction="#quitter" text="Quit" />
+                        <Label layoutX="288.0" layoutY="82.0" prefHeight="45.0" prefWidth="24.0" text="=" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
